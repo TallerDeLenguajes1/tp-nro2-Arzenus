@@ -1,0 +1,1 @@
+El archivo no se puede ver. Ya que al cambiar de ramas en git, el programa actualiza de forma automatica la carpeta donde inicializamos el repositorio
