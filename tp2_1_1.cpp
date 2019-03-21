@@ -4,23 +4,17 @@
 #define N 4
 #define M 5
 
-void mt(int _N, int _M){
-
-	for(int f = 0;f<_N; f++)
-	{
-	 	for(int c = 0;c<_M; c++)
-		{
-			printf(" %d ", c);
-		}
-	printf("\n");
-	}
-}
 
 
 int main()
-{
-	int f,c;
-	mt(N, M);
+{	
+	int mt[N][M];
+
+	for (int i = 0; i < 20; ++i)
+	{
+		printf(" %p \r\n", mt+i);
+		getchar();
+	}
 
 	return 0;
 }
