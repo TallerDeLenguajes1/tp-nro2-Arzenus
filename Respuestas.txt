@@ -1,1 +1,5 @@
 El archivo no se puede ver. Ya que al cambiar de ramas en git, el programa actualiza de forma automatica la carpeta donde inicializamos el repositorio
+
+i) Se puede ver el arbol de ramas y los cambios realizados a cada una con el comando gitk --all
+
+j) ahora se pueden ver los archivos de ambas ramas en un solo directorio
