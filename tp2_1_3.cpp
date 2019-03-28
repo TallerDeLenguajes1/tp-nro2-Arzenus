@@ -1,41 +1,50 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include<time.h>
+#include <time.h>
 
 
 
 int main()
 {
     srand(time(NULL));
-    int columnas = 5 + rand()%(15+1-5);
 
-    int matriz[15][columnas];
+    int *filas[15];
 
-    for (int i = 0; i< 15; i++)
-    {
-        for(int j = 0; j< columnas; j++)
-        {
-            matriz[i][j] = 100 + rand()%(999+1-100);
-        }
-    }
+    int contador = 0;
 
-    int mult = 15*columnas;
+    int arregloPar[15];
 
     for (int i = 0; i< 15; i++)
     {
-        for(int j = 0; j< columnas; j++)
+    	int columnas = 5 + rand()%(15+1-5);
+
+        int *col = (int *)malloc(sizeof(int) * columnas);
+        filas[i] = col;
+
+        for (int j = 0; j < columnas; ++j)
         {
-            printf("%d", matriz[i][j]);
+           	filas[i][j] = 100 + rand()%(999+1-100);
+           	printf(" %d ", filas[i][j]);
+
+            if ((filas[i][j]%2) == 0)
+            {
+                contador = contador + 1;
+            }
         }
+        printf("\n");
+
+        arregloPar[i] = contador;
     }
 
-        for (int i = 0; i< 15; i++)
+    printf("\n");
+
+    for (int k = 0; k<15; k++)
     {
-        for(int j = 0; j< columnas; j++)
-        {
-            printf("%d", matriz[i][j]);
-        }
+        printf("En la fila %d hay %d numeros pares\n", k+1, arregloPar[k]);
     }
 
 
-return 0;}
+    return 0;
+
+    //int *punt
+}
